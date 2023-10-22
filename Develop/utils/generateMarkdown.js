@@ -37,7 +37,7 @@ function generateMarkdown(data) {
   - [Installation](#installation🛠️)
   - [Usage](#usage💻)
   ${renderLicenseLink(data.license)}
-  - [Contribuiting](#contribuiting🤝)
+  - [Contribuiting](#contributing🤝)
   - [Tests](#tests🧪)
   - [Questions](#questions❓)
 
@@ -50,7 +50,7 @@ function generateMarkdown(data) {
 
   ${renderLicenseSection(data.license)}
 
-  ## Contribuiting🤝
+  ## Contributing🤝
   ${data.contributions}
 
   ## Tests🧪
@@ -58,9 +58,11 @@ function generateMarkdown(data) {
   ${data.tests}
 
   ## Questions❓
-  If you have any questions about the repository, open an issue or
-  contact me directly at [${data.email}](mailto:${data.email}). You can find more of my work
+  If you have any questions about the repository, please open an issue or
+  email me directly at [${data.email}](mailto:${data.email}). You can find more of my work
   at [${data.github}](https://github.com/${data.github})!
 `;
 }
+
+//exports the module to global scope
 module.exports = generateMarkdown;
