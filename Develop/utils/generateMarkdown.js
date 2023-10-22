@@ -1,31 +1,29 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// function that returns a license badge
 function renderLicenseBadge(license) {
   if (license !== 'None') {
-    ` ![Github license](https://img.shields.io/badge/license-${license.replace(/ /g,'%20')}-blue.svg)`
+    return ` ![Github license](https://img.shields.io/badge/license-${license.replace(/ /g,'%20')}-blue.svg)`
   }
   return '';
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+// function that returns the license link
 function renderLicenseLink(license) {
   if (license !== 'None') {
-    ` ![Github license](https://img.shields.io/badge/license-${license.replace(/ /g,'%20')}-blue.svg)`
+    return '- [License](#license📜)'
   }
   return '';
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
+// function that returns the license section of README
 function renderLicenseSection(license) {
   if (license !== 'None') {
-    ` ![Github license](https://img.shields.io/badge/license-${license.replace(/ /g,'%20')}-blue.svg)`
+    return `## License📜
+The license of this project is: ${license}`
   }
   return '';
 }
 
-// TODO: Create a function to generate markdown for README
+// function that generates markdown for README
 function generateMarkdown(data) {
   return `
   # ${data.projectName} 👩‍💻
@@ -36,35 +34,33 @@ function generateMarkdown(data) {
   ${data.description}
 
   ## Table of Contents
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [License](${renderLicenseLink(data.license)})
-  - [Contribuiting](#contribuiting)
-  - [Tests](#tests)
-  - [Questions](#questions)
+  - [Installation](#installation🛠️)
+  - [Usage](#usage💻)
+  ${renderLicenseLink(data.license)}
+  - [Contribuiting](#contribuiting🤝)
+  - [Tests](#tests🧪)
+  - [Questions](#questions❓)
 
-  ## Installation 🛠️
+  ## Installation🛠️
   To install necesary dependencies, run the following command:
   ${data.dependencies}
 
-
-  ## Usage 💻
+  ## Usage💻
   ${data.usage}
 
-  ## License 📜
   ${renderLicenseSection(data.license)}
 
-  ## How to contribuite 🤝
+  ## Contribuiting🤝
   ${data.contributions}
 
-  ## Tests 🧪
+  ## Tests🧪
   To run tests, run the following command:
   ${data.tests}
 
-  ## Questions ❓
+  ## Questions❓
   If you have any questions about the repository, open an issue or
-  contact me directly at ${data.email}. You can find more of my work
-  at ${data.github}!
+  contact me directly at [${data.email}](mailto:${data.email}). You can find more of my work
+  at [${data.github}](https://github.com/${data.github})!
 `;
 }
 module.exports = generateMarkdown;
