@@ -34,7 +34,7 @@ const questions = [{
 }, {
     type: 'input',
     message: 'If contributing is allowed, how does one contribute to the repo to the repo?',
-    name: 'contribuitions',
+    name: 'contributions',
     default: 'Fork the project and make a pull request with your new code'
 }, {
     type: 'input',
@@ -47,9 +47,6 @@ const questions = [{
     name: 'email'
     //add validate to ensure they add the email
 }];
-
-// TODO: Create a function to write README file
-// function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
 function init() {
