@@ -3,6 +3,9 @@
 ![Alt text](/Develop/assets/images/Image2.png)
 ![Alt text](/Develop/assets/images/Image3.png)
 
+## Walkthrough video
+https://drive.google.com/file/d/1m9kudGipyMeYReqhYrpLvytU_1BasNEf/view
+
 ## Description
 As stated in the title, this project is a README generator that creates a README file after asking a series of questions to the user.
 
